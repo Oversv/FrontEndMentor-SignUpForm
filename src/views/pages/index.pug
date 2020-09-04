@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png")
+        link(rel="stylesheet", href="css/styles.css")
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet") 
+        title Frontend Mentor | Intro component with sign up form
+
+    body
+        main
+            header.header
+                h1.header__heading Learn to code by watching others
+                p.header__paragraph See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+
+            div#advertising.advertising
+                p.advertising__paragraph 
+                    span.advertising__span  Try it free 7 days 
+                    | then $20/mo. thereafter
+            div#form-container.form-container
+                form#form.form
+                    input#first-name.form__input(type="text", name="firstName" placeholder="First Name")
+                    small.form__warning First Name cannot be empty
+                    input#last-name.form__input(type="text", name="lastName" placeholder="Last Name")
+                    small.form__warning Last Name cannot be empty
+                    input#email.form__input(type="email", name="email" placeholder="Email Address")
+                    small.form__warning Looks like this is not an email
+                    input#password.form__input(type="password", name="password" placeholder="Password")
+                    small.form__warning Password cannot be empty
+                    input#claim-trial.form__button(type="submit", value="Claim your free trial")
+                    small.form__small 
+                        | By clicking the button, you are agreeing to our 
+                        span.form__terms-and-services Terms and Services
+        script(src="js/scripts.js")

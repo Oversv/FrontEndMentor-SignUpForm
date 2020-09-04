@@ -1,0 +1,31 @@
+*,
+*::before, 
+*::after {     
+    box-sizing: border-box;   
+}
+
+body{   
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $red url("../images/bg-intro-mobile.png") scroll;
+
+    @media (min-width: 768px) {       
+        background: $red url("../images/bg-intro-desktop.png") scroll;
+    } 
+}
+main{
+  
+    @media (min-width: 768px) {       
+        height: 100%;        
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }        
+}

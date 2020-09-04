@@ -1,0 +1,155 @@
+.header{    
+    text-align: center; 
+    padding: 125px 25px 34px 25px;
+    
+    @media (min-width: 768px) {        
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;        
+        justify-content: center;        
+        width: 50%;
+        margin: 0;
+        padding: 75px 50px 50px 50px;        
+        text-align: left;
+    }
+
+    &__heading{
+        font-size: 28px;       
+        font-weight: 700;
+        line-height: 36px;       
+        color: $white; 
+
+        @media (min-width: 600px) {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 10px 0;  
+        }
+    }
+
+    &__paragraph{        
+        line-height: 26px;
+        font-weight: 500;
+        color: $white;
+        opacity: 0.8;
+    }
+}
+.advertising{    
+    padding: 0 25px;
+    margin-bottom: 25px;    
+
+    @media (min-width: 768px) { 
+        flex: 0 0 10%;
+        width: 50%;        
+        padding: 0 25px;
+        margin: 12px 0;
+    }
+
+    &__paragraph{
+        text-align: center;
+        background-color: $blue;
+        color: $grayishBlue;
+        border-radius: 10px;
+        font-weight: 400;
+        color: $white;        
+        padding: 20px 50px;
+        box-shadow: 0 8px 0 0 rgba(0,0,0,0.2);
+
+        @media (min-width: 768px) { 
+            padding: 18px 50px;
+        }    
+    }
+
+    &__span{
+        font-weight: 700;
+    }
+}
+
+.form-container{
+   padding: 0 25px 75px 25px;   
+
+   @media (min-width: 768px) {
+    flex: 0 0 70%;    
+    width: 50%;
+    padding: 0 25px;
+    }
+}
+
+.form{
+    text-align: center;    
+    background-color: $white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    box-shadow: 0 8px 0 0 rgba(0,0,0,0.2);
+
+    @media (min-width: 768px) {
+        padding: 25px 50px 50px 50px;
+    }
+    
+    &__input{
+        height: 55px;
+        width: 100%;        
+        color: #000;
+        font-weight: 700;        
+        padding-left: 10px;
+        border: 1px solid #aaa;
+        outline: none;
+        border-radius: 4px;        
+        margin-top: 18px;        
+        
+        &:focus{
+            border: 1px solid $blue;
+        }
+
+        &--warning{
+            background: url("../images/icon-error.svg") no-repeat scroll 93% 50%;
+            border: 2px solid $red;                      
+
+            &::placeholder {
+                color: $red;
+            }
+        }
+    }
+
+    &__warning{
+        color: $red;
+        font-style: italic;
+        display: block;
+        text-align: right;        
+        font-size: 12px;
+        font-weight: 500;         
+        display: none;
+
+        &--show{
+            @extend .form__warning;
+            display: block;            
+        }
+    }
+
+    &__button{
+        height: 55px;        
+        width: 100%;
+        text-transform: uppercase;
+        background-color: $green;        
+        color: $white;        
+        font-weight: 500;
+        border-radius: 4px;
+        margin-top: 18px;   
+        margin-bottom: 4px;
+        cursor: pointer;  
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    &__small{
+        color: $grayishBlue;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    &__terms-and-services{
+        color: $red;        
+        font-weight: 700;   
+    }
+}
